@@ -1,0 +1,64 @@
+body {
+    text-align: center;
+    background-color: beige
+}
+
+#cats {
+    font-size: 4rem;
+    letter-spacing: 1rem;
+}
+
+#garfield {
+    background-color: orange;
+
+}
+
+#cheshire {
+    background-color: purple;
+
+}
+
+#salem {
+    background-color: black;
+    color: white;
+}
+
+#jynx {
+    background-color:gainsboro
+}
+
+#balto {
+    background-color: grey;
+}
+
+#wishbone {
+    background-color: cornflowerblue;
+}
+
+#airbud{
+    background-color: lemonchiffon
+}
+
+#lassie{
+    background-color:darkorange
+}
+
+
+#dog {
+    margin-top:3rem;
+}
+button {
+    height: 100px;
+    width: 200px;
+    font-size: 1.5rem;
+    border-radius: 15%;
+    border: 8px solid gold
+}
+
+header {
+    margin-top:2rem;
+}
+
+img{
+    width: 400px;
+}
