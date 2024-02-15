@@ -8,7 +8,6 @@ const baltoButt = document.querySelector('#balto')
 const alldogs = document.querySelector('#allDogs')
 
 
-
 allCats.addEventListener('click', async ()=> {
     const response = await axios.get('http://localhost:3001/cats/')
     console.log(response.data)
@@ -42,8 +41,12 @@ alldogs.addEventListener('click', async ()=> {
 })
 
 
-garfButt.addEventListener('click', async ()=> {
-    const response = await axios.get('http://localhost:3001/cats/1')
+
+const getButtons = document.querySelectorAll('.cat')
+getButtons.forEach((button) => {
+    button.addEventListener("click", async ()=> {
+        console.log(button.value)
+        const response = await axios.get(`http://localhost:3001/cats/${button.value}`)
     console.log(response.data)
     let catName = document.querySelector('#name')
     let catImg = document.querySelector('#img')
@@ -51,39 +54,56 @@ garfButt.addEventListener('click', async ()=> {
     catImg.setAttribute('src', response.data.image)
     let catNames = document.querySelector('#catnames')
     catNames.style.display = 'none'
-
-})
-
-baltoButt.addEventListener('click', async ()=> {
-    const response = await axios.get('http://localhost:3001/dogs/1')
-    console.log(response.data)
-    let catName = document.querySelector('#name')
-    let catImg = document.querySelector('#img')
-    catName.innerText = response.data.name
-    catImg.setAttribute('src', response.data.image)
-    let catNames = document.querySelector('#catnames')
-    catNames.style.display = 'none'
-
+    }
+    )
 })
 
 
-cheshButt.addEventListener('click', async ()=> {
-    const response = await axios.get('http://localhost:3001/cats/6')
-    console.log(response.data)
-    let catName = document.querySelector('#name')
-    let catImg = document.querySelector('#img')
-    catName.innerText = response.data.name
-    catImg.setAttribute('src', response.data.image)
-
-})
 
 
-lassie.addEventListener('click', async ()=> {
-    const response = await axios.get('http://localhost:3001/dogs/0')
-    console.log(response.data)
-    let catName = document.querySelector('#name')
-    let catImg = document.querySelector('#img')
-    catName.innerText = response.data.name
-    catImg.setAttribute('src', response.data.image)
 
-})
+// garfButt.addEventListener('click', async ()=> {
+//     const response = await axios.get('http://localhost:3001/cats/1')
+//     console.log(response.data)
+//     let catName = document.querySelector('#name')
+//     let catImg = document.querySelector('#img')
+//     catName.innerText = response.data.name
+//     catImg.setAttribute('src', response.data.image)
+//     let catNames = document.querySelector('#catnames')
+//     catNames.style.display = 'none'
+
+// })
+
+// baltoButt.addEventListener('click', async ()=> {
+//     const response = await axios.get('http://localhost:3001/dogs/1')
+//     console.log(response.data)
+//     let catName = document.querySelector('#name')
+//     let catImg = document.querySelector('#img')
+//     catName.innerText = response.data.name
+//     catImg.setAttribute('src', response.data.image)
+//     let catNames = document.querySelector('#catnames')
+//     catNames.style.display = 'none'
+
+// })
+
+
+// cheshButt.addEventListener('click', async ()=> {
+//     const response = await axios.get('http://localhost:3001/cats/6')
+//     console.log(response.data)
+//     let catName = document.querySelector('#name')
+//     let catImg = document.querySelector('#img')
+//     catName.innerText = response.data.name
+//     catImg.setAttribute('src', response.data.image)
+
+// })
+
+
+// lassie.addEventListener('click', async ()=> {
+//     const response = await axios.get('http://localhost:3001/dogs/0')
+//     console.log(response.data)
+//     let catName = document.querySelector('#name')
+//     let catImg = document.querySelector('#img')
+//     catName.innerText = response.data.name
+//     catImg.setAttribute('src', response.data.image)
+
+// })
