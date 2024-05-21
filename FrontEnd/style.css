@@ -62,3 +62,12 @@ header {
 img{
     width: 400px;
 }
+
+.button-container {
+    display: flex
+}
+
+.cat-buttons, .dog-buttons {
+    display:flex;
+    flex-direction: column;
+}
