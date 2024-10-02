@@ -64,10 +64,11 @@ img{
 }
 
 .button-container {
-    display: flex
+    margin-top:3rem;
+    display: flex;
+    justify-content: space-around
 }
 
 .cat-buttons, .dog-buttons {
-    display:flex;
-    flex-direction: column;
+
 }
